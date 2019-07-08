@@ -12,12 +12,14 @@
   <button (click)="share()">
     Share
   </button>
-  <p>
-  <button *ngIf="product.price > 700 ">
-    Notify Me
-  </button>
-  </p>
+
+<app-product-alerts
+  [product]="product">
+  (notify)="onNotify()">
+</app-product-alerts>
+
 </div>
+
 
 <!-- 
 Copyright Google LLC. All Rights Reserved.
